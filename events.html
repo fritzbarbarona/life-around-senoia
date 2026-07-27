@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Events — Life Around Senoia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500;1,9..144,600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Archivo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.page-hero{padding:52px 0 36px}
+.page-hero h1{font-size:clamp(2.2rem,4.5vw,3.2rem);margin:14px 0 12px}
+
+.recurring-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.recur-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+.recur-card .cadence{font-family:var(--ui);font-weight:700;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--brick)}
+.recur-card h4{font-size:1.15rem;margin:10px 0 8px}
+.recur-card p{font-size:.86rem;color:var(--ink-soft)}
+
+.month-tabs{display:flex;gap:10px;margin-bottom:28px;flex-wrap:wrap}
+.month-tab{font-family:var(--ui);font-weight:700;font-size:.85rem;padding:10px 20px;border-radius:999px;border:1px solid var(--line);background:var(--card)}
+.month-tab.active{background:var(--pine-deep);color:var(--paper);border-color:var(--pine-deep)}
+.month-panel{display:none;grid-template-columns:80px 1fr;gap:18px}
+.month-panel.active{display:grid}
+.cal-event{grid-column:1/-1;display:grid;grid-template-columns:80px 1fr;gap:18px;padding:16px 0;border-bottom:1px solid var(--line)}
+.cal-date{background:var(--paper-2);border-radius:10px;text-align:center;padding:10px 0;font-family:var(--ui)}
+.cal-date .d{font-family:var(--display);font-size:1.4rem;color:var(--brick);display:block}
+.cal-date .m{font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-faint)}
+.cal-event h4{font-size:1.05rem;margin-bottom:4px}
+.cal-event p{font-size:.88rem;color:var(--ink-soft)}
+.cal-note{font-size:.82rem;color:var(--ink-faint);font-style:italic;margin-top:6px}
+
+.recap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+@media(max-width:980px){.recurring-grid{grid-template-columns:1fr 1fr}.recap-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.recurring-grid,.recap-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav-bar">
+    <a href="index.html" class="brand"><div><div class="brand-mark">Life Around <em>Senoia</em></div><div class="brand-sub">A KartPath Media Publication</div></div></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li class="has-dropdown"><a href="people.html">People ▾</a>
+        <div class="dropdown"><a href="people.html#featured-families">Featured Families</a><a href="people.html#young-achievers">Young Achievers</a><a href="people.html#pet-of-the-month">Pet of the Month</a></div>
+      </li>
+      <li><a href="nonprofit.html">Nonprofit</a></li>
+      <li><a href="lifestyle.html">Lifestyle</a></li>
+      <li class="active"><a href="events.html">Events</a></li>
+      <li><a href="directory.html">Directory</a></li>
+      <li><a href="editions.html">Digital Editions</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <a href="advertise.html" class="nav-cta">Advertise With Us</a>
+    <button class="nav-toggle">☰</button>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <span class="eyebrow">Around Town</span>
+    <h1>What's happening downtown</h1>
+    <p style="color:var(--ink-soft);max-width:620px">A living calendar of Senoia's regulars — plus full coverage of the town's signature events, straight from the magazine.</p>
+  </div>
+</section>
+
+<!-- RECURRING -->
+<section style="padding-top:10px">
+  <div class="wrap">
+    <div class="section-head"><div><span class="eyebrow">Every Week &amp; Every Month</span><h2>Senoia regulars</h2></div></div>
+    <div class="recurring-grid">
+      <div class="recur-card"><span class="cadence">Weekly</span><h4>Farmers' Market</h4><p>Local produce, makers, and neighbors on Main Street, every Saturday morning through December.</p></div>
+      <div class="recur-card"><span class="cadence">Weekly</span><h4>Senoia Beer Co. Lineup</h4><p>Live music and rotating taps — check their weekly schedule downtown.</p></div>
+      <div class="recur-card"><span class="cadence">Monthly</span><h4>Alive After Five</h4><p>Downtown shops stay open late with music, food trucks, and porch-conversation energy.</p></div>
+      <div class="recur-card"><span class="cadence">Annual</span><h4>Taste of Senoia</h4><p>Local restaurants, live music, and silent auctions — a signature fundraiser reinvested into the community.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CALENDAR -->
+<section class="on-paper2">
+  <div class="wrap">
+    <div class="section-head"><div><span class="eyebrow">Calendar</span><h2>Upcoming dates</h2></div></div>
+    <div class="month-tabs">
+      <button class="month-tab active" data-month="august">August</button>
+      <button class="month-tab" data-month="september">September</button>
+      <button class="month-tab" data-month="october">October</button>
+      <button class="month-tab" data-month="november">November</button>
+    </div>
+
+    <div class="month-panel active" id="august">
+      <div class="cal-event">
+        <div class="cal-date"><span class="d">21</span><span class="m">Aug</span></div>
+        <div><h4>Locals Night</h4><p>Main Street, 5:00 PM. Shop small, grab a bite, and enjoy live music on the main stage — family-friendly and free.</p><p class="cal-note">Bring a lawn chair to enjoy the music.</p></div>
+      </div>
+      <div class="cal-event">
+        <div class="cal-date"><span class="d">Sat</span><span class="m">Weekly</span></div>
+        <div><h4>Senoia Farmers' Market</h4><p>40 Travis Street, 8:30 AM–1:00 PM. Fresh produce, local makers, and mimosas at Nic &amp; Norman's — every Saturday through December.</p></div>
+      </div>
+    </div>
+
+    <div class="month-panel" id="september">
+      <div class="cal-event">
+        <div class="cal-date"><span class="d">6</span><span class="m">Sep</span></div>
+        <div><h4>Senoia PorchFest</h4><p>Historic District, 3:00 PM. Porches and yards become stages for local and regional bands — plus food vendors, art displays, and kids' activities. Free.</p></div>
+      </div>
+      <div class="cal-event">
+        <div class="cal-date"><span class="d">18</span><span class="m">Sep</span></div>
+        <div><h4>Alive After Five — Friday Night Fever</h4><p>Main Street. Downtown shops stay open late with live music, food trucks, and handmade goods.</p></div>
+      </div>
+      <div class="cal-event">
+        <div class="cal-date"><span class="d">19</span><span class="m">Sep</span></div>
+        <div><h4>Fish Derby at Lake Marimac</h4><p>A morning outdoors for local families, hosted by the Senoia Optimist Club. Rods, tackle, and prizes provided for kids who need them.</p></div>
+      </div>
+      <div class="cal-event">
+        <div class="cal-date"><span class="d">26</span><span class="m">Sep</span></div>
+        <div><h4>21st Annual Senoia Car Show</h4><p>Historic District. 600+ collector and classic vehicles line downtown, with live music, food vendors, and an awards presentation.</p></div>
+      </div>
+      <div class="cal-event">
+        <div class="cal-date"><span class="d">Sat</span><span class="m">Weekly</span></div>
+        <div><h4>Senoia Farmers' Market</h4><p>40 Travis Street, 8:30 AM–1:00 PM. Every Saturday through December.</p></div>
+      </div>
+    </div>
+
+    <div class="month-panel" id="october">
+      <div class="cal-event">
+        <div class="cal-date"><span class="d">2</span><span class="m">Oct</span></div>
+        <div><h4>Fall Boutique Crawl</h4><p>Marimac Lakes. Local boutiques stay open late with specials and giveaways — grab a Crawl Card, collect stamps, and win prizes.</p></div>
+      </div>
+      <div class="cal-event">
+        <div class="cal-date"><span class="d">11</span><span class="m">Oct</span></div>
+        <div><h4>Italian Heritage Festival</h4><p>Main Street, 3:00 PM. Hosted by Borgo Italia and the DDA — Italian street food, bourbon tasting, limoncello, and inflatables for the kids.</p></div>
+      </div>
+      <div class="cal-event">
+        <div class="cal-date"><span class="d">16</span><span class="m">Oct</span></div>
+        <div><h4>Alive After Five — Oktober Fest</h4><p>Main Street. Music, food, and downtown shops open late.</p></div>
+      </div>
+      <div class="cal-event">
+        <div class="cal-date"><span class="d">Sat</span><span class="m">Weekly</span></div>
+        <div><h4>Senoia Farmers' Market</h4><p>40 Travis Street, 8:30 AM–1:00 PM. Every Saturday through December.</p></div>
+      </div>
+    </div>
+
+    <div class="month-panel" id="november">
+      <div class="cal-event">
+        <div class="cal-date"><span class="d">20</span><span class="m">Nov</span></div>
+        <div><h4>Alive After Five — Gather &amp; Give</h4><p>Main Street. The season's downtown celebration of music, food, and neighbors.</p></div>
+      </div>
+      <div class="cal-event">
+        <div class="cal-date"><span class="d">Sat</span><span class="m">Weekly</span></div>
+        <div><h4>Senoia Farmers' Market</h4><p>40 Travis Street, 8:30 AM–1:00 PM. Every Saturday through December.</p></div>
+      </div>
+    </div>
+    <p style="text-align:center;margin-top:26px"><a href="about.html#nominate" class="btn-ghost">Submit an event for the calendar</a></p>
+  </div>
+</section>
+
+<!-- EVENT COVERAGE RECAPS -->
+<section>
+  <div class="wrap">
+    <div class="section-head"><div><span class="eyebrow">Event Coverage</span><h2>Straight from the magazine</h2></div></div>
+    <div class="recap-grid">
+      <a href="lifestyle.html#secret-sauce" class="card">
+        <div class="card-img"><div class="photo-placeholder">America's 250th on Main Street<br>Issue 6</div></div>
+        <div class="card-body"><span class="tag tag-events">Recap</span><h3 class="card-title">America's 250th on Main Street</h3><p class="card-dek">Fireworks, flags on every porch, and a whole town gathered downtown — how Senoia marked the nation's 250th birthday this July.</p></div>
+      </a>
+      <a href="nonprofit.html" class="card">
+        <div class="card-img"><div class="photo-placeholder">Senoia Optimist Club<br>Issue 6</div></div>
+        <div class="card-body"><span class="tag tag-events">Feature</span><h3 class="card-title">Four Decades of Showing Up</h3><p class="card-dek">The Senoia Optimist Club's scholarships, Fish Derby, and Taste of Senoia keep investing in the next generation.</p></div>
+      </a>
+      <div class="card">
+        <div class="card-img"><div class="photo-placeholder">The Senoia Car Show<br>Issue 1</div></div>
+        <div class="card-body"><span class="tag tag-events">Recap</span><h3 class="card-title">20th Annual Senoia Car Show</h3><p class="card-dek">Chrome, community, and Main Street closed down for one of Senoia's longest-running traditions.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div><div class="footer-brand">Life Around <em style="color:var(--honey-soft);font-style:italic">Senoia</em></div>
+        <p class="footer-tag">A bi-monthly, hyper-local magazine celebrating the people, businesses, and stories that make Senoia special. Published by KartPath Media.</p></div>
+      <div><h4>Explore</h4><a href="people.html">People</a><a href="nonprofit.html">Nonprofit</a><a href="lifestyle.html">Lifestyle</a><a href="events.html">Events</a><a href="directory.html">Directory</a></div>
+      <div><h4>Publication</h4><a href="editions.html">Digital Editions</a><a href="about.html">About Us</a><a href="advertise.html">Advertise</a><a href="about.html#nominate">Nominate a Story</a></div>
+      <div><h4>Contact</h4><a href="mailto:kevin@kartpathmedia.com">kevin@kartpathmedia.com</a><a href="mailto:blake@kartpathmedia.com">blake@kartpathmedia.com</a><a href="mailto:editorial@kartpathmedia.com">editorial@kartpathmedia.com</a></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 KartPath Media LLC · Life Around Senoia</span><span>Peachtree City, GA</span></div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

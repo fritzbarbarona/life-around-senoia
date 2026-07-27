@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital Editions — Life Around Senoia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500;1,9..144,600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Archivo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.page-hero{padding:52px 0 36px}
+.page-hero h1{font-size:clamp(2.2rem,4.5vw,3.2rem);margin:14px 0 12px}
+
+.featured-reader{display:grid;grid-template-columns:.9fr 1.1fr;gap:0;border-radius:20px;overflow:hidden;background:var(--pine-deep)}
+.reader-cover{padding:50px;display:flex;align-items:center;justify-content:center}
+.reader-cover-art{width:220px;aspect-ratio:.77;background:linear-gradient(160deg,var(--honey),var(--brick));border-radius:8px;box-shadow:0 30px 60px -20px rgba(0,0,0,.5);display:flex;align-items:flex-end;padding:18px;color:var(--pine-deep);font-family:var(--display);font-weight:700;font-size:1.1rem}
+.reader-copy{padding:50px 50px 50px 0;color:var(--paper)}
+.reader-copy .eyebrow{color:var(--honey-soft)}
+.reader-copy .eyebrow::before{background:var(--honey-soft)}
+.reader-copy h2{color:var(--paper);font-size:2rem;margin:12px 0 14px}
+.reader-copy p{color:rgba(251,247,239,.75);margin-bottom:24px;max-width:440px}
+
+.archive-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.issue-card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:.2s ease}
+.issue-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-card)}
+.issue-cover{aspect-ratio:.77;background:linear-gradient(160deg,var(--pine-soft),var(--pine-deep));display:flex;align-items:flex-end;padding:16px;color:var(--paper);font-family:var(--display);font-weight:600}
+.issue-card .meta{padding:16px}
+.issue-card .meta .date{font-family:var(--ui);font-size:.72rem;color:var(--ink-faint);text-transform:uppercase;letter-spacing:.06em}
+.issue-card .meta h4{font-size:1.05rem;margin:6px 0}
+
+.upcoming-strip{border:2px dashed var(--line);border-radius:16px;padding:26px 30px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+
+@media(max-width:980px){.featured-reader{grid-template-columns:1fr}.reader-cover{padding-bottom:0}.reader-copy{padding:36px}.archive-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.archive-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav-bar">
+    <a href="index.html" class="brand"><div><div class="brand-mark">Life Around <em>Senoia</em></div><div class="brand-sub">A KartPath Media Publication</div></div></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li class="has-dropdown"><a href="people.html">People ▾</a>
+        <div class="dropdown"><a href="people.html#featured-families">Featured Families</a><a href="people.html#young-achievers">Young Achievers</a><a href="people.html#pet-of-the-month">Pet of the Month</a></div>
+      </li>
+      <li><a href="nonprofit.html">Nonprofit</a></li>
+      <li><a href="lifestyle.html">Lifestyle</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="directory.html">Directory</a></li>
+      <li class="active"><a href="editions.html">Digital Editions</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <a href="advertise.html" class="nav-cta">Advertise With Us</a>
+    <button class="nav-toggle">☰</button>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <span class="eyebrow">The Archive</span>
+    <h1>Every issue, flip-through ready</h1>
+    <p style="color:var(--ink-soft);max-width:620px">Read Life Around Senoia exactly as it was printed — full-page spreads, ads and all — right in your browser.</p>
+  </div>
+</section>
+
+<section style="padding-top:10px">
+  <div class="wrap">
+    <div class="featured-reader">
+      <div class="reader-cover"><div class="reader-cover-art">LAS 6</div></div>
+      <div class="reader-copy">
+        <span class="eyebrow on-pine">Latest Published Edition</span>
+        <h2>Life Around Senoia — Issue 6</h2>
+        <p>Celebrating one full year of Life Around Senoia. Featuring the Brewington family, the Senoia Optimist Club, Doc Brown Farm &amp; Distillers, Milo Stupski, and Crook's Corner — delivered July 2026.</p>
+        <a href="#" class="btn" style="background:var(--honey);color:var(--pine-deep)">Open Full Flipbook Edition ↗</a>
+        <p style="font-size:.8rem;color:rgba(251,247,239,.5);margin-top:14px">Embeds via Issuu · hyperlinks baked into the PDF before upload per KPM's standard process</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="on-paper2">
+  <div class="wrap">
+    <div class="section-head"><div><span class="eyebrow">Full Archive</span><h2>Back issues</h2></div></div>
+    <div class="archive-grid">
+      <a href="#" class="issue-card">
+        <div class="issue-cover">LAS 6</div>
+        <div class="meta"><span class="date">Delivered July 2026</span><h4>Issue 6</h4><p style="font-size:.82rem;color:var(--ink-soft)">The Brewington Family · Senoia Optimist Club · Doc Brown Farm &amp; Distillers</p></div>
+      </a>
+      <a href="#" class="issue-card">
+        <div class="issue-cover">LAS 4</div>
+        <div class="meta"><span class="date">Delivered Mar 2026</span><h4>Issue 4</h4><p style="font-size:.82rem;color:var(--ink-soft)">The Jenkins Family · ELEVATE Coweta Students · The Tilted House</p></div>
+      </a>
+      <a href="#" class="issue-card">
+        <div class="issue-cover">LAS 3</div>
+        <div class="meta"><span class="date">Delivered Jan 2026</span><h4>Issue 3</h4><p style="font-size:.82rem;color:var(--ink-soft)">The Crook Family · Historical Society · Mouse Map</p></div>
+      </a>
+      <a href="#" class="issue-card">
+        <div class="issue-cover">LAS 1</div>
+        <div class="meta"><span class="date">Delivered Sept 2025</span><h4>Issue 1</h4><p style="font-size:.82rem;color:var(--ink-soft)">The Bergstrom Family · Noah Rieffel · Story of Senoia</p></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="upcoming-strip">
+      <div>
+        <span class="eyebrow">Web-Only Content</span>
+        <h3 style="font-size:1.3rem;margin-top:8px">Some stories don't fit in print — but they'll always fit here.</h3>
+      </div>
+      <a href="people.html" class="btn btn-outline">See Online-Only Stories</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div><div class="footer-brand">Life Around <em style="color:var(--honey-soft);font-style:italic">Senoia</em></div>
+        <p class="footer-tag">A bi-monthly, hyper-local magazine celebrating the people, businesses, and stories that make Senoia special. Published by KartPath Media.</p></div>
+      <div><h4>Explore</h4><a href="people.html">People</a><a href="nonprofit.html">Nonprofit</a><a href="lifestyle.html">Lifestyle</a><a href="events.html">Events</a><a href="directory.html">Directory</a></div>
+      <div><h4>Publication</h4><a href="editions.html">Digital Editions</a><a href="about.html">About Us</a><a href="advertise.html">Advertise</a><a href="about.html#nominate">Nominate a Story</a></div>
+      <div><h4>Contact</h4><a href="mailto:kevin@kartpathmedia.com">kevin@kartpathmedia.com</a><a href="mailto:blake@kartpathmedia.com">blake@kartpathmedia.com</a><a href="mailto:editorial@kartpathmedia.com">editorial@kartpathmedia.com</a></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 KartPath Media LLC · Life Around Senoia</span><span>Peachtree City, GA</span></div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

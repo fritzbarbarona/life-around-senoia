@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us — Life Around Senoia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500;1,9..144,600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Archivo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.page-hero{padding:56px 0 40px;text-align:center}
+.page-hero h1{font-size:clamp(2.2rem,4.5vw,3.4rem);max-width:760px;margin:14px auto 18px}
+.page-hero p{max-width:600px;margin:0 auto;color:var(--ink-soft);font-size:1.1rem}
+
+.expect-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.expect-item{padding:26px;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+.expect-item h4{font-family:var(--display);font-size:1.1rem;margin-bottom:8px}
+.expect-item p{font-size:.92rem;color:var(--ink-soft)}
+
+.team-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.team-card{display:flex;gap:20px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px}
+.team-photo{width:96px;height:96px;border-radius:50%;flex-shrink:0}
+.team-card h3{font-size:1.3rem;margin-bottom:4px}
+.team-role{font-family:var(--ui);font-size:.75rem;color:var(--brick);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px;display:block}
+.team-card p{font-size:.92rem;color:var(--ink-soft);line-height:1.6}
+
+.quote-block{max-width:720px;margin:0 auto;text-align:center;padding:0 20px}
+.quote-block p{font-family:var(--display);font-size:1.7rem;font-style:italic;line-height:1.4;color:var(--pine-deep)}
+
+.nominate-form{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:760px;margin:0 auto}
+.nominate-form .full{grid-column:1/-1}
+.nominate-form label{font-family:var(--ui);font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-faint);display:block;margin-bottom:6px}
+.nominate-form input,.nominate-form select,.nominate-form textarea{
+  width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:10px;font-family:var(--read);font-size:.96rem;background:var(--card);
+}
+.nominate-form textarea{min-height:110px;resize:vertical}
+@media(max-width:860px){.expect-grid,.team-grid,.nominate-form{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav-bar">
+    <a href="index.html" class="brand">
+      <div><div class="brand-mark">Life Around <em>Senoia</em></div><div class="brand-sub">A KartPath Media Publication</div></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li class="has-dropdown"><a href="people.html">People ▾</a>
+        <div class="dropdown">
+          <a href="people.html#featured-families">Featured Families</a>
+          <a href="people.html#young-achievers">Young Achievers</a>
+          <a href="people.html#pet-of-the-month">Pet of the Month</a>
+        </div>
+      </li>
+      <li><a href="nonprofit.html">Nonprofit</a></li>
+      <li><a href="lifestyle.html">Lifestyle</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="directory.html">Directory</a></li>
+      <li><a href="editions.html">Digital Editions</a></li>
+      <li class="active"><a href="about.html">About</a></li>
+    </ul>
+    <a href="advertise.html" class="nav-cta">Advertise With Us</a>
+    <button class="nav-toggle">☰</button>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <span class="eyebrow" style="justify-content:center">About the Publication</span>
+    <h1>A magazine written by the town, for the town.</h1>
+    <p>Life Around Senoia is more than a magazine — it's a celebration of community, connection, and the people who make this small town special.</p>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap-narrow quote-block">
+    <p>"We're both fathers, friends, and participants in our communities. This publication is our way of giving back — of highlighting what's good, celebrating what's real, and making sure no one in town feels like a stranger."</p>
+    <span class="eyebrow pine" style="justify-content:center;margin-top:20px">— Kevin Thompson, Publisher</span>
+  </div>
+</section>
+
+<section class="on-paper2">
+  <div class="wrap">
+    <div class="section-head"><div><span class="eyebrow">Our Team</span><h2>Who's behind the pages</h2></div></div>
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="photo-placeholder team-photo"></div>
+        <div>
+          <h3>Kevin Thompson</h3>
+          <span class="team-role">Publisher &amp; Founder</span>
+          <p>Nearly 20 years ago, Kevin got his start in publishing working with a niche publisher of nearly 35 enthusiast titles — a journey that eventually led him to launch a business focused on supporting publishers and content-driven organizations, helping them scale their operations, tell better stories, and grow their communities.</p>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="photo-placeholder team-photo"></div>
+        <div>
+          <h3>Blake Adams</h3>
+          <span class="team-role">Advertising Director &amp; Managing Partner</span>
+          <p>Born and raised in Fayette and Coweta County, Blake has proudly called Senoia home for over 15 years. He's been an active part of the local business and creative scene, with a deep passion for connecting people and building things that matter to his hometown.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head"><div><span class="eyebrow">What To Expect</span><h2>Every issue includes</h2></div></div>
+    <div class="expect-grid">
+      <div class="expect-item"><h4>Featured Family</h4><p>Sharing what makes a local household unique, grounded, and inspiring.</p></div>
+      <div class="expect-item"><h4>Young Achiever or Athlete</h4><p>Highlighting a student making an impact in the classroom, on the field, or in the community.</p></div>
+      <div class="expect-item"><h4>Business Spotlight</h4><p>Telling the story behind one of our local businesses and the people who make it tick.</p></div>
+      <div class="expect-item"><h4>Nonprofit Feature</h4><p>Uplifting the organizations making a difference — and ways you can help.</p></div>
+      <div class="expect-item"><h4>Pet of the Month</h4><p>Because our furry, feathered, and four-legged friends are family too.</p></div>
+      <div class="expect-item"><h4>Seasonal Features &amp; Events</h4><p>Local happenings and ways to stay connected to what's going on right here in town.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="on-pine" id="nominate">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow on-pine">Nominate a Story</span>
+        <h2>Know someone (or something!) we should feature?</h2>
+      </div>
+    </div>
+    <p style="color:rgba(251,247,239,.75);max-width:600px;margin-bottom:36px">This magazine is for the community, and we believe it should be shaped by the community. Nominate a Featured Family, Young Achiever, Student Athlete, local business, nonprofit, or beautiful home &amp; yard.</p>
+    <form class="nominate-form" onsubmit="return false" style="background:var(--card);padding:32px;border-radius:16px">
+      <div><label>Your Name</label><input type="text" placeholder="Jane Smith"></div>
+      <div><label>Your Email</label><input type="email" placeholder="jane@email.com"></div>
+      <div class="full"><label>I'd like to nominate a...</label>
+        <select>
+          <option>Featured Family</option>
+          <option>Young Achiever / Student Athlete</option>
+          <option>Local Business</option>
+          <option>Nonprofit</option>
+          <option>Pet of the Month</option>
+          <option>Yard of the Month</option>
+          <option>Community Event</option>
+        </select>
+      </div>
+      <div class="full"><label>Tell us their story</label><textarea placeholder="What makes them worth featuring?"></textarea></div>
+      <div class="full"><button class="btn btn-primary" type="submit">Submit Nomination</button></div>
+    </form>
+    <p style="color:rgba(251,247,239,.6);margin-top:16px;font-size:.9rem">Or email us directly at <a href="mailto:editorial@kartpathmedia.com" style="color:var(--honey-soft);text-decoration:underline">editorial@kartpathmedia.com</a></p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div><div class="footer-brand">Life Around <em style="color:var(--honey-soft);font-style:italic">Senoia</em></div>
+        <p class="footer-tag">A bi-monthly, hyper-local magazine celebrating the people, businesses, and stories that make Senoia special. Published by KartPath Media.</p></div>
+      <div><h4>Explore</h4><a href="people.html">People</a><a href="nonprofit.html">Nonprofit</a><a href="lifestyle.html">Lifestyle</a><a href="events.html">Events</a><a href="directory.html">Directory</a></div>
+      <div><h4>Publication</h4><a href="editions.html">Digital Editions</a><a href="about.html">About Us</a><a href="advertise.html">Advertise</a><a href="about.html#nominate">Nominate a Story</a></div>
+      <div><h4>Contact</h4><a href="mailto:kevin@kartpathmedia.com">kevin@kartpathmedia.com</a><a href="mailto:blake@kartpathmedia.com">blake@kartpathmedia.com</a><a href="mailto:editorial@kartpathmedia.com">editorial@kartpathmedia.com</a></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 KartPath Media LLC · Life Around Senoia</span><span>Peachtree City, GA</span></div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

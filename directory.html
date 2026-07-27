@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Business Directory — Life Around Senoia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500;1,9..144,600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Archivo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.page-hero{padding:52px 0 30px}
+.page-hero h1{font-size:clamp(2.2rem,4.5vw,3.2rem);margin:14px 0 12px}
+
+.dir-controls{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-bottom:30px;position:sticky;top:80px;background:var(--paper);z-index:10;padding:14px 0}
+.dir-search{flex:1;min-width:220px;padding:13px 18px;border-radius:999px;border:1px solid var(--line);font-family:var(--read);font-size:.95rem;background:var(--card)}
+.filter-pills{display:flex;gap:8px;flex-wrap:wrap}
+.filter-pill{font-family:var(--ui);font-weight:700;font-size:.78rem;padding:9px 16px;border-radius:999px;border:1px solid var(--line);background:var(--card)}
+.filter-pill.active{background:var(--pine-deep);color:var(--paper);border-color:var(--pine-deep)}
+
+.biz-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.biz-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;transition:.2s ease}
+.biz-card:hover{box-shadow:var(--shadow-card);transform:translateY(-3px)}
+.biz-card .cat{font-family:var(--ui);font-weight:700;font-size:.66rem;letter-spacing:.09em;text-transform:uppercase;color:var(--brick)}
+.biz-card h3{font-size:1.2rem;margin:10px 0 8px}
+.biz-card .contact{font-size:.86rem;color:var(--ink-soft);line-height:1.7;margin-bottom:12px}
+.biz-card .story-link{font-family:var(--ui);font-weight:700;font-size:.8rem;color:var(--brick)}
+.biz-card .story-link::after{content:" →"}
+
+.grow-card{background:var(--paper-2);border:2px dashed var(--line);border-radius:14px;padding:22px;display:flex;align-items:center;justify-content:center;text-align:center}
+.grow-card p{color:var(--ink-soft);font-size:.9rem}
+
+@media(max-width:980px){.biz-grid{grid-template-columns:1fr 1fr}.dir-controls{top:0}}
+@media(max-width:620px){.biz-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav-bar">
+    <a href="index.html" class="brand"><div><div class="brand-mark">Life Around <em>Senoia</em></div><div class="brand-sub">A KartPath Media Publication</div></div></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li class="has-dropdown"><a href="people.html">People ▾</a>
+        <div class="dropdown"><a href="people.html#featured-families">Featured Families</a><a href="people.html#young-achievers">Young Achievers</a><a href="people.html#pet-of-the-month">Pet of the Month</a></div>
+      </li>
+      <li><a href="nonprofit.html">Nonprofit</a></li>
+      <li><a href="lifestyle.html">Lifestyle</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li class="active"><a href="directory.html">Directory</a></li>
+      <li><a href="editions.html">Digital Editions</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <a href="advertise.html" class="nav-cta">Advertise With Us</a>
+    <button class="nav-toggle">☰</button>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <span class="eyebrow">Business Directory</span>
+    <h1>Every storefront, service, and story on Main Street</h1>
+    <p style="color:var(--ink-soft);max-width:640px">Built from the businesses featured in Life Around Senoia and Faces of Downtown Senoia. Where a full feature exists, you'll find a "Read Their Story" link straight to it.</p>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="dir-controls">
+      <input type="text" id="dirSearch" class="dir-search" placeholder="Search businesses or categories...">
+      <div class="filter-pills">
+        <button class="filter-pill active" data-cat="all">All</button>
+        <button class="filter-pill" data-cat="Food & Drink">Food &amp; Drink</button>
+        <button class="filter-pill" data-cat="Health & Wellness">Health &amp; Wellness</button>
+        <button class="filter-pill" data-cat="Faith">Faith</button>
+        <button class="filter-pill" data-cat="Home & Garden">Home &amp; Garden</button>
+        <button class="filter-pill" data-cat="Professional Services">Professional</button>
+        <button class="filter-pill" data-cat="Auto & Retail">Auto &amp; Retail</button>
+      </div>
+    </div>
+
+    <div class="biz-grid">
+      <div class="biz-card" data-name="Senoia Coffee" data-cat="Food & Drink">
+        <span class="cat">Food &amp; Drink</span>
+        <h3>Senoia Coffee</h3>
+        <p class="contact">770-599-8000<br>senoiacoffeecafe.com</p>
+      </div>
+      <div class="biz-card" data-name="Image Fitness" data-cat="Health & Wellness">
+        <span class="cat">Health &amp; Wellness</span>
+        <h3>Image Fitness</h3>
+        <p class="contact">770-299-9511<br>image-fitness.com</p>
+      </div>
+      <div class="biz-card" data-name="Senoia Eyecare" data-cat="Health & Wellness">
+        <span class="cat">Health &amp; Wellness</span>
+        <h3>Senoia Eyecare</h3>
+        <p class="contact">770-727-6687<br>senoiaeyecare.com</p>
+      </div>
+      <div class="biz-card" data-name="Mahaffey Linkous Orthodontics" data-cat="Health & Wellness">
+        <span class="cat">Health &amp; Wellness</span>
+        <h3>Mahaffey Linkous Orthodontics</h3>
+        <p class="contact">770-487-6439<br>peachtreecitybraces.com</p>
+      </div>
+      <div class="biz-card" data-name="i58 Mission" data-cat="Faith">
+        <span class="cat">Faith &amp; Nonprofit</span>
+        <h3>i58 Mission</h3>
+        <p class="contact">770-301-0870<br>thei58mission.org</p>
+        <a href="nonprofit.html" class="story-link">Read Their Story</a>
+      </div>
+      <div class="biz-card" data-name="ONE Church" data-cat="Faith">
+        <span class="cat">Faith</span>
+        <h3>ONE Church</h3>
+        <p class="contact">770-716-5768<br>beonechurch.com</p>
+      </div>
+      <div class="biz-card" data-name="Maple Ridge Nursery" data-cat="Home & Garden">
+        <span class="cat">Home &amp; Garden</span>
+        <h3>Maple Ridge Nursery</h3>
+        <p class="contact">770-987-4066<br>japanesemaplesandconifers.com</p>
+      </div>
+      <div class="biz-card" data-name="Kim Peacock Real Estate" data-cat="Professional Services">
+        <span class="cat">Professional Services</span>
+        <h3>Kim Peacock — Real Estate</h3>
+        <p class="contact">404-202-8332<br>kimberlyjpeacock.com</p>
+      </div>
+      <div class="biz-card" data-name="Roosen Realty" data-cat="Professional Services">
+        <span class="cat">Professional Services</span>
+        <h3>Roosen Realty</h3>
+        <p class="contact">310-463-6196</p>
+      </div>
+      <div class="biz-card" data-name="John's Golf Cars" data-cat="Auto & Retail">
+        <span class="cat">Auto &amp; Retail</span>
+        <h3>John's Golf Cars</h3>
+        <p class="contact">678-464-8480</p>
+      </div>
+      <div class="grow-card biz-card" data-name="More Businesses" data-cat="all">
+        <p><strong>Directory growing.</strong><br>30+ more Faces of Downtown Senoia businesses are being added as their profiles migrate online.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="on-pine">
+  <div class="wrap center">
+    <span class="eyebrow on-pine" style="justify-content:center">Own a Business in Senoia?</span>
+    <h2 style="color:var(--paper);margin:14px 0 20px">Get listed — and get considered for a feature</h2>
+    <a href="advertise.html" class="btn" style="background:var(--honey);color:var(--pine-deep)">Add Your Business</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div><div class="footer-brand">Life Around <em style="color:var(--honey-soft);font-style:italic">Senoia</em></div>
+        <p class="footer-tag">A bi-monthly, hyper-local magazine celebrating the people, businesses, and stories that make Senoia special. Published by KartPath Media.</p></div>
+      <div><h4>Explore</h4><a href="people.html">People</a><a href="nonprofit.html">Nonprofit</a><a href="lifestyle.html">Lifestyle</a><a href="events.html">Events</a><a href="directory.html">Directory</a></div>
+      <div><h4>Publication</h4><a href="editions.html">Digital Editions</a><a href="about.html">About Us</a><a href="advertise.html">Advertise</a><a href="about.html#nominate">Nominate a Story</a></div>
+      <div><h4>Contact</h4><a href="mailto:kevin@kartpathmedia.com">kevin@kartpathmedia.com</a><a href="mailto:blake@kartpathmedia.com">blake@kartpathmedia.com</a><a href="mailto:editorial@kartpathmedia.com">editorial@kartpathmedia.com</a></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 KartPath Media LLC · Life Around Senoia</span><span>Peachtree City, GA</span></div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

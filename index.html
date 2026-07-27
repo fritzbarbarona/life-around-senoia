@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Life Around Senoia — Stories From Our Town</title>
+<meta name="description" content="Life Around Senoia is the digital home of the community magazine — featured families, nonprofit spotlights, local events, and the business directory for downtown Senoia, GA.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500;1,9..144,600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Archivo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+/* Home-specific */
+.hero{position:relative;padding:54px 0 70px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center}
+.hero h1{font-size:clamp(2.5rem,5vw,4.1rem);margin:16px 0 20px}
+.hero p.lede{font-size:1.2rem;color:var(--ink-soft);max-width:520px;margin-bottom:28px;font-family:var(--read)}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:30px}
+.hero-stats{display:flex;gap:32px;padding-top:26px;border-top:1px solid var(--line)}
+.hero-stat b{display:block;font-family:var(--display);font-size:1.7rem;color:var(--pine-deep)}
+.hero-stat span{font-family:var(--ui);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-faint)}
+.hero-visual{position:relative;aspect-ratio:4/5;border-radius:20px;overflow:hidden;box-shadow:var(--shadow-lift)}
+.hero-visual .photo-placeholder{font-size:.72rem}
+.hero-badge{
+  position:absolute;bottom:18px;left:18px;right:18px;background:rgba(18,36,28,.82);
+  backdrop-filter:blur(6px);border-radius:12px;padding:14px 16px;color:var(--paper);
+}
+.hero-badge .porch-light{color:var(--honey-soft)}
+.hero-badge p{font-family:var(--display);font-size:1.05rem;margin-top:4px}
+
+/* Latest issue strip */
+.issue-strip{background:var(--pine-deep);padding:20px 0}
+.issue-strip .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.issue-strip .left{display:flex;align-items:center;gap:16px;color:var(--paper)}
+.issue-cover-mini{width:46px;height:60px;border-radius:4px;background:linear-gradient(160deg,var(--honey),var(--brick));flex-shrink:0}
+.issue-strip .left p{font-family:var(--ui);font-size:.9rem;color:rgba(251,247,239,.8)}
+.issue-strip .left strong{font-family:var(--display);font-size:1.15rem;font-weight:600;display:block;color:var(--paper)}
+
+/* Category rail */
+.cat-rail{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.cat-tile{
+  padding:26px 20px;border-radius:16px;border:1px solid var(--line);background:var(--card);
+  transition:.2s ease;
+}
+.cat-tile:hover{transform:translateY(-4px);box-shadow:var(--shadow-card);border-color:transparent}
+.cat-tile .num{font-family:var(--ui);font-size:.7rem;color:var(--ink-faint);letter-spacing:.1em}
+.cat-tile h3{font-size:1.15rem;margin:10px 0 8px}
+.cat-tile p{font-size:.85rem;color:var(--ink-soft);line-height:1.5}
+
+/* Featured grid — asymmetric */
+.feature-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:24px}
+.feature-grid .lead-card{grid-row:span 2}
+.feature-grid .lead-card .card-img{aspect-ratio:16/13}
+.side-stack{display:flex;flex-direction:column;gap:24px}
+.side-card{display:flex;gap:16px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px;transition:.2s ease}
+.side-card:hover{box-shadow:var(--shadow-card);transform:translateY(-2px)}
+.side-card .card-img{width:120px;height:96px;flex-shrink:0;border-radius:8px;aspect-ratio:unset}
+.side-card .side-body{display:flex;flex-direction:column;justify-content:center}
+.side-card .card-title{font-size:1rem;margin:6px 0 0}
+
+/* Directory teaser map strip */
+.directory-teaser{display:grid;grid-template-columns:.9fr 1.1fr;gap:0;border-radius:20px;overflow:hidden;border:1px solid var(--line)}
+.directory-teaser .copy{padding:48px;background:var(--card)}
+.directory-teaser .biz-grid{background:var(--paper-2);padding:36px;display:grid;grid-template-columns:1fr 1fr;gap:14px;align-content:start}
+.mini-biz{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px;font-family:var(--ui)}
+.mini-biz .name{font-weight:700;font-size:.88rem;color:var(--pine-deep)}
+.mini-biz .cat{font-size:.68rem;color:var(--ink-faint);letter-spacing:.05em;text-transform:uppercase}
+
+/* Newsletter split */
+.news-split{display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:20px;overflow:hidden}
+.news-panel{padding:46px}
+.news-panel.readers{background:var(--pine-deep);color:var(--paper)}
+.news-panel.business{background:var(--brick);color:var(--paper)}
+.news-panel h3{color:var(--paper);font-size:1.5rem;margin-bottom:10px}
+.news-panel p{opacity:.85;margin-bottom:20px;font-size:.95rem}
+.news-form{display:flex;gap:10px}
+.news-form input{flex:1;padding:13px 16px;border-radius:999px;border:none;font-family:var(--read);font-size:.95rem}
+@media(max-width:980px){
+  .hero-grid{grid-template-columns:1fr}
+  .hero-visual{max-width:420px}
+  .cat-rail{grid-template-columns:1fr 1fr}
+  .feature-grid{grid-template-columns:1fr}
+  .feature-grid .lead-card{grid-row:auto}
+  .directory-teaser,.news-split{grid-template-columns:1fr}
+  .directory-teaser .biz-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:620px){
+  .cat-rail{grid-template-columns:1fr}
+  .news-form{flex-direction:column}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="site-header">
+  <nav class="nav-bar">
+    <a href="index.html" class="brand">
+      <div>
+        <div class="brand-mark">Life Around <em>Senoia</em></div>
+        <div class="brand-sub">A KartPath Media Publication</div>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li class="active"><a href="index.html">Home</a></li>
+      <li class="has-dropdown">
+        <a href="people.html">People ▾</a>
+        <div class="dropdown">
+          <a href="people.html#featured-families">Featured Families</a>
+          <a href="people.html#young-achievers">Young Achievers</a>
+          <a href="people.html#pet-of-the-month">Pet of the Month</a>
+        </div>
+      </li>
+      <li><a href="nonprofit.html">Nonprofit</a></li>
+      <li><a href="lifestyle.html">Lifestyle</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="directory.html">Directory</a></li>
+      <li><a href="editions.html">Digital Editions</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <a href="advertise.html" class="nav-cta">Advertise With Us</a>
+    <button class="nav-toggle">☰</button>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Issue 6 · Out Now</span>
+      <h1>The people, porches, and Main Street moments that make Senoia home.</h1>
+      <p class="lede">Featured families, nonprofit spotlights, local events, and the small-town stories worth slowing down for — updated year-round, not just every other month.</p>
+      <div class="hero-actions">
+        <a href="#latest-stories" class="btn btn-primary">Read the Latest Stories</a>
+        <a href="editions.html" class="btn btn-outline">Browse Digital Editions</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><b>6</b><span>Issues Published</span></div>
+        <div class="hero-stat"><b>40+</b><span>Businesses Featured</span></div>
+        <div class="hero-stat"><b>Bi-Monthly</b><span>Direct-Mailed to Senoia</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="photo-placeholder">Cover Story Photo<br>Featured Family — Issue 6</div>
+      <div class="hero-badge">
+        <span class="porch-light"><span class="bulb"></span>In Issue 6</span>
+        <p>The Brewington Family: Making Room at the Table</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LATEST ISSUE STRIP ============ -->
+<div class="issue-strip">
+  <div class="wrap">
+    <div class="left">
+      <div class="issue-cover-mini"></div>
+      <p>Latest Digital Edition<strong>Life Around Senoia — Issue 6</strong></p>
+    </div>
+    <a href="editions.html" class="btn btn-outline-light">Read the Full Digital Edition</a>
+  </div>
+</div>
+
+<!-- ============ CATEGORY RAIL ============ -->
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Explore</span>
+        <h2>Every corner of the community, in one place</h2>
+      </div>
+    </div>
+    <div class="cat-rail">
+      <a href="people.html" class="cat-tile">
+        <span class="num">01</span>
+        <h3>People</h3>
+        <p>Featured Families, Young Achievers &amp; Pet of the Month</p>
+      </a>
+      <a href="nonprofit.html" class="cat-tile">
+        <span class="num">02</span>
+        <h3>Nonprofit</h3>
+        <p>The organizations quietly holding our community together</p>
+      </a>
+      <a href="lifestyle.html" class="cat-tile">
+        <span class="num">03</span>
+        <h3>Lifestyle</h3>
+        <p>Recipes, history, and the flavor of life around town</p>
+      </a>
+      <a href="events.html" class="cat-tile">
+        <span class="num">04</span>
+        <h3>Events</h3>
+        <p>What's happening downtown — calendar &amp; recaps</p>
+      </a>
+      <a href="directory.html" class="cat-tile">
+        <span class="num">05</span>
+        <h3>Directory</h3>
+        <p>Find and support local, independent Senoia businesses</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURED STORIES ============ -->
+<section class="on-paper2" id="latest-stories">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Latest Stories</span>
+        <h2>Fresh off the porch</h2>
+      </div>
+      <a href="people.html" class="btn-ghost">See all stories</a>
+    </div>
+    <div class="feature-grid">
+      <a href="people.html#featured-families" class="card lead-card">
+        <div class="card-img"><div class="photo-placeholder">Featured Family Photo<br>Issue 6</div></div>
+        <div class="card-body">
+          <span class="tag tag-people">Featured Family · Issue 6</span>
+          <h3 class="card-title">The Brewington Family: Making Room at the Table</h3>
+          <p class="card-dek">Darrin, Ashley, and their daughter Nayeli are building community by helping people feel at home — from an oncology floor to the launch of Abide Church in Senoia.</p>
+        </div>
+      </a>
+      <div class="side-stack">
+        <a href="nonprofit.html" class="side-card">
+          <div class="card-img"><div class="photo-placeholder">Senoia Optimist Club</div></div>
+          <div class="side-body">
+            <span class="tag tag-nonprofit">Nonprofit Spotlight</span>
+            <h3 class="card-title">Four Decades of Showing Up: The Senoia Optimist Club</h3>
+          </div>
+        </a>
+        <a href="people.html#young-achievers" class="side-card">
+          <div class="card-img"><div class="photo-placeholder">Milo Stupski</div></div>
+          <div class="side-body">
+            <span class="tag tag-people">Young Achiever</span>
+            <h3 class="card-title">Shocking the World: Senoia's 9-Year-Old Dirt Bike Racer</h3>
+          </div>
+        </a>
+        <a href="lifestyle.html#historical-society" class="side-card">
+          <div class="card-img"><div class="photo-placeholder">History Museum</div></div>
+          <div class="side-body">
+            <span class="tag tag-lifestyle">Lifestyle</span>
+            <h3 class="card-title">Keeping Senoia's Story Alive Since 1976</h3>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EVENTS STRIP ============ -->
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Happening Around Town</span>
+        <h2>Upcoming events</h2>
+      </div>
+      <a href="events.html" class="btn-ghost">Full events calendar</a>
+    </div>
+    <div class="grid-3">
+      <div class="card">
+        <div class="card-img"><div class="photo-placeholder">Locals Night</div></div>
+        <div class="card-body">
+          <span class="tag tag-events">Aug 21 · Main Street</span>
+          <h3 class="card-title">Locals Night</h3>
+          <p class="card-dek">Shop small, grab a bite, and enjoy live music on the main stage. Family-friendly, free, and open to everyone — bring a lawn chair.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-img"><div class="photo-placeholder">Senoia PorchFest</div></div>
+        <div class="card-body">
+          <span class="tag tag-events">Sep 6 · Historic District</span>
+          <h3 class="card-title">Senoia PorchFest</h3>
+          <p class="card-dek">Porches and yards become stages for local and regional bands — plus food vendors, art displays, and kids' activities.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-img"><div class="photo-placeholder">Farmers Market</div></div>
+        <div class="card-body">
+          <span class="tag tag-events">Weekly · Sat</span>
+          <h3 class="card-title">Senoia Farmers' Market</h3>
+          <p class="card-dek">Fresh produce, local makers, and mimosas at Nic &amp; Norman's — every Saturday morning through December.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DIRECTORY TEASER ============ -->
+<section class="on-paper2">
+  <div class="wrap">
+    <div class="directory-teaser">
+      <div class="copy">
+        <span class="eyebrow">Business Directory</span>
+        <h2 style="font-size:2rem;margin:14px 0 16px">Every storefront on Main Street, searchable in seconds</h2>
+        <p style="color:var(--ink-soft);margin-bottom:24px">Built from the same businesses featured in <em>Faces of Downtown Senoia</em> — every listing links to that business's full story when one exists.</p>
+        <a href="directory.html" class="btn btn-primary">Browse the Directory</a>
+      </div>
+      <div class="biz-grid">
+        <div class="mini-biz"><div class="name">Senoia Coffee</div><div class="cat">Cafe</div></div>
+        <div class="mini-biz"><div class="name">i58 Mission</div><div class="cat">Nonprofit</div></div>
+        <div class="mini-biz"><div class="name">Image Fitness</div><div class="cat">Fitness</div></div>
+        <div class="mini-biz"><div class="name">Senoia Eyecare</div><div class="cat">Health</div></div>
+        <div class="mini-biz"><div class="name">Maple Ridge Nursery</div><div class="cat">Garden</div></div>
+        <div class="mini-biz"><div class="name">ONE Church</div><div class="cat">Faith</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NEWSLETTER SPLIT ============ -->
+<section>
+  <div class="wrap">
+    <div class="news-split">
+      <div class="news-panel readers">
+        <span class="porch-light"><span class="bulb"></span>For Residents</span>
+        <h3>Get Senoia stories in your inbox</h3>
+        <p>New features, event reminders, and the digital edition — delivered every other week.</p>
+        <form class="news-form" onsubmit="return false">
+          <input type="email" placeholder="you@email.com">
+          <button class="btn btn-primary" type="submit">Subscribe</button>
+        </form>
+      </div>
+      <div class="news-panel business">
+        <span class="porch-light" style="color:var(--honey-soft)"><span class="bulb"></span>For Business Owners</span>
+        <h3>Get your story in front of Senoia</h3>
+        <p>Join the business directory, get considered for a feature, and hear first about advertising openings.</p>
+        <form class="news-form" onsubmit="return false">
+          <input type="email" placeholder="business@email.com">
+          <button class="btn" type="submit" style="background:var(--pine-deep);color:var(--paper)">Sign Up</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">Life Around <em style="color:var(--honey-soft);font-style:italic">Senoia</em></div>
+        <p class="footer-tag">A bi-monthly, hyper-local magazine celebrating the people, businesses, and stories that make Senoia special. Published by KartPath Media.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <a href="people.html">People</a>
+        <a href="nonprofit.html">Nonprofit</a>
+        <a href="lifestyle.html">Lifestyle</a>
+        <a href="events.html">Events</a>
+        <a href="directory.html">Directory</a>
+      </div>
+      <div>
+        <h4>Publication</h4>
+        <a href="editions.html">Digital Editions</a>
+        <a href="about.html">About Us</a>
+        <a href="advertise.html">Advertise</a>
+        <a href="about.html#nominate">Nominate a Story</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="mailto:kevin@kartpathmedia.com">kevin@kartpathmedia.com</a>
+        <a href="mailto:blake@kartpathmedia.com">blake@kartpathmedia.com</a>
+        <a href="mailto:editorial@kartpathmedia.com">editorial@kartpathmedia.com</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 KartPath Media LLC · Life Around Senoia</span>
+      <span>Peachtree City, GA</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>People — Life Around Senoia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500;1,9..144,600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Archivo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.page-hero{padding:52px 0 36px}
+.page-hero h1{font-size:clamp(2.2rem,4.5vw,3.2rem);margin:14px 0 12px}
+.subnav{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.subnav a{font-family:var(--ui);font-weight:700;font-size:.82rem;padding:9px 18px;border-radius:999px;border:1px solid var(--line);background:var(--card)}
+.subnav a:hover{border-color:var(--brick);color:var(--brick)}
+
+.story-row{display:grid;grid-template-columns:.85fr 1.15fr;gap:36px;align-items:center;padding:40px 0;border-bottom:1px solid var(--line)}
+.story-row:last-child{border-bottom:none}
+.story-row.reverse{grid-template-columns:1.15fr .85fr}
+.story-row.reverse .story-img{order:2}
+.story-img{aspect-ratio:4/3;border-radius:16px;overflow:hidden}
+.story-copy .issue-chip{font-family:var(--ui);font-size:.68rem;color:var(--ink-faint);letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px;display:block}
+.story-copy h3{font-size:1.7rem;margin-bottom:12px}
+.story-copy p{color:var(--ink-soft);font-size:1rem;line-height:1.65;margin-bottom:10px}
+.story-copy blockquote{font-family:var(--display);font-style:italic;font-size:1.15rem;color:var(--pine-deep);border-left:3px solid var(--honey);padding-left:16px;margin:14px 0}
+
+.achiever-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.achiever-card{grid-column:span 1}
+.achiever-card.full{grid-column:span 3;display:grid;grid-template-columns:.9fr 1.1fr;gap:0}
+.achiever-card.full .card-img{aspect-ratio:auto;height:100%}
+.achiever-card.full .card-body{padding:30px}
+
+.pet-teaser{text-align:center;padding:60px 40px;border:2px dashed var(--line);border-radius:20px}
+.pet-teaser h3{font-size:1.5rem;margin:14px 0 10px}
+.pet-teaser p{color:var(--ink-soft);max-width:440px;margin:0 auto 22px}
+
+@media(max-width:900px){
+  .story-row,.story-row.reverse{grid-template-columns:1fr}
+  .story-row.reverse .story-img{order:0}
+  .achiever-grid{grid-template-columns:1fr 1fr}
+  .achiever-card.full{grid-column:span 2;grid-template-columns:1fr}
+}
+@media(max-width:620px){.achiever-grid{grid-template-columns:1fr}.achiever-card.full{grid-column:span 1}}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav-bar">
+    <a href="index.html" class="brand"><div><div class="brand-mark">Life Around <em>Senoia</em></div><div class="brand-sub">A KartPath Media Publication</div></div></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li class="has-dropdown active"><a href="people.html">People ▾</a>
+        <div class="dropdown">
+          <a href="people.html#featured-families">Featured Families</a>
+          <a href="people.html#young-achievers">Young Achievers</a>
+          <a href="people.html#pet-of-the-month">Pet of the Month</a>
+        </div>
+      </li>
+      <li><a href="nonprofit.html">Nonprofit</a></li>
+      <li><a href="lifestyle.html">Lifestyle</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="directory.html">Directory</a></li>
+      <li><a href="editions.html">Digital Editions</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <a href="advertise.html" class="nav-cta">Advertise With Us</a>
+    <button class="nav-toggle">☰</button>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <span class="eyebrow">People of Senoia</span>
+    <h1>The families, kids, and companions who make this town feel like home</h1>
+    <p style="color:var(--ink-soft);max-width:600px">Every issue, we sit down on someone's porch and listen. These are their stories.</p>
+    <div class="subnav">
+      <a href="#featured-families">Featured Families</a>
+      <a href="#young-achievers">Young Achievers</a>
+      <a href="#pet-of-the-month">Pet of the Month</a>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED FAMILIES -->
+<section id="featured-families" style="padding-top:20px">
+  <div class="wrap">
+    <div class="section-head"><div><span class="eyebrow">Section</span><h2>Featured Families</h2></div></div>
+
+    <div class="story-row">
+      <div class="story-img"><div class="photo-placeholder">The Brewington Family<br>Issue 6</div></div>
+      <div class="story-copy">
+        <span class="issue-chip">Issue 6 · Featured Family</span>
+        <h3>Making Room at the Table</h3>
+        <p>Spend a few minutes with Darrin, Ashley, and their nearly two-year-old daughter Nayeli, and their warmth is contagious. Both Georgia natives, they grew up in Fayetteville, married in 2019, and met working at Chick-fil-A — starting on the very same day. They chose Senoia because it placed them right between both sides of their family.</p>
+        <p>Darrin's path led from Worship Pastor at New Vision Church to Newnan City Church, where the Coweta tornado reshaped how he saw ministry — the most meaningful moments happening in living rooms and around dinner tables. Today he's planting Abide Church in Senoia, with a soft launch this August and an official launch on January 10, 2027, while Ashley serves patients as an oncology nurse. The belief behind it all: everyone deserves to know there's a place for them.</p>
+        <blockquote>"Community isn't something you stumble upon — it's something you intentionally create."</blockquote>
+      </div>
+    </div>
+
+    <div class="story-row reverse">
+      <div class="story-img"><div class="photo-placeholder">The Jenkins Family<br>Issue 4</div></div>
+      <div class="story-copy">
+        <span class="issue-chip">Issue 4 · Featured Family</span>
+        <h3>The Jenkins Family Is All In</h3>
+        <p>Stephen and Katelyn Jenkins are ALL IN on life. They show up in big ways — for each other, for their son, for their friends, for their church, and for this community they proudly call home.</p>
+        <p>Since moving to Senoia from Thomaston in 2018, they haven't just lived here — they've leaned in, drawn by the town's charm and a search for a next chapter closer to family and easier airport access.</p>
+      </div>
+    </div>
+
+    <div class="story-row">
+      <div class="story-img"><div class="photo-placeholder">The Crook Family<br>Issue 3</div></div>
+      <div class="story-copy">
+        <span class="issue-chip">Issue 3 · Featured Family</span>
+        <h3>A Family Whose Values Helped Shape a Town — and Still Do</h3>
+        <p>Some families leave a mark on a town. Others become part of its foundation. In Senoia, the Crook family is the latter — a name woven quietly but deeply into the character of the community.</p>
+        <p>For Ellis Crook, those values weren't abstract ideas. They were a way of life, passed down from his father Arry Lee: hard work, integrity, faith, and service.</p>
+      </div>
+    </div>
+
+    <div class="story-row reverse">
+      <div class="story-img"><div class="photo-placeholder">The Bergstrom Family<br>Issue 1</div></div>
+      <div class="story-copy">
+        <span class="issue-chip">Issue 1 · Featured Family</span>
+        <h3>The Bergstroms: Speaking Life, Building Legacy</h3>
+        <p>In the Bergstrom home, traditions run deep. One of the most powerful is their habit of "speaking life" — on birthdays, the family gathers to name how they see the Fruit of the Spirit at work in the celebrant's life.</p>
+        <blockquote>"Nobody's perfect. Everyone's welcome. And through Jesus, anything is possible."</blockquote>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- YOUNG ACHIEVERS -->
+<section class="on-paper2" id="young-achievers">
+  <div class="wrap">
+    <div class="section-head"><div><span class="eyebrow">Section</span><h2>Young Achievers</h2></div></div>
+    <div class="achiever-grid">
+      <div class="achiever-card card full">
+        <div class="card-img"><div class="photo-placeholder">Milo Stupski<br>Issue 6</div></div>
+        <div class="card-body">
+          <span class="tag tag-people">Issue 6 · Young Achiever</span>
+          <h3 class="card-title" style="font-size:1.5rem">Shocking the World, One Race at a Time — Milo Stupski</h3>
+          <p class="card-dek">At first glance, nine-year-old Milo Stupski might seem a little quiet — until you put him on a dirt bike. Known on the circuit as the "Hole Shot King," Milo competes in the Grand National Cross Country (GNCC) Series and currently sits ranked No. 3 in the nation in the Micro-E division. With six victories and counting, he lives by the three words written across his handlebars: <em>Shock the World</em>. His advice to other kids? "Don't give up. Be brave."</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-img"><div class="photo-placeholder">Noah "Trxy" Rieffel<br>Issue 1</div></div>
+        <div class="card-body"><span class="tag tag-people">Issue 1</span><h3 class="card-title">Noah "Trxy" Rieffel</h3><p class="card-dek">Senoia's 14-year-old esports team captain — In-Game Leader of his Fortnite team EXO in XP League, a youth league built around skill, sportsmanship, and leadership.</p></div>
+      </div>
+      <div class="card">
+        <div class="card-img"><div class="photo-placeholder">Coming Soon</div></div>
+        <div class="card-body"><span class="tag tag-people">Issue 3</span><h3 class="card-title">Young Achiever, Issue 3</h3><p class="card-dek">Full profile migrating from print — check back soon, or read it in the digital edition.</p></div>
+      </div>
+      <div class="card">
+        <div class="card-img"><div class="photo-placeholder">Coming Soon</div></div>
+        <div class="card-body"><span class="tag tag-people">Issue 4</span><h3 class="card-title">Young Achiever, Issue 4</h3><p class="card-dek">Full profile migrating from print — check back soon, or read it in the digital edition.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PET OF THE MONTH -->
+<section id="pet-of-the-month">
+  <div class="wrap">
+    <div class="section-head"><div><span class="eyebrow">Section</span><h2>Pet of the Month</h2></div></div>
+    <div class="pet-teaser">
+      <span class="eyebrow" style="justify-content:center">Launching With Issue 6 Online</span>
+      <h3>Because our furry, feathered, and four-legged friends are family too.</h3>
+      <p>We're building this into a full online gallery as issues digitize. Know a Senoia pet with a story to tell?</p>
+      <a href="about.html#nominate" class="btn btn-primary">Nominate a Pet</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div><div class="footer-brand">Life Around <em style="color:var(--honey-soft);font-style:italic">Senoia</em></div>
+        <p class="footer-tag">A bi-monthly, hyper-local magazine celebrating the people, businesses, and stories that make Senoia special. Published by KartPath Media.</p></div>
+      <div><h4>Explore</h4><a href="people.html">People</a><a href="nonprofit.html">Nonprofit</a><a href="lifestyle.html">Lifestyle</a><a href="events.html">Events</a><a href="directory.html">Directory</a></div>
+      <div><h4>Publication</h4><a href="editions.html">Digital Editions</a><a href="about.html">About Us</a><a href="advertise.html">Advertise</a><a href="about.html#nominate">Nominate a Story</a></div>
+      <div><h4>Contact</h4><a href="mailto:kevin@kartpathmedia.com">kevin@kartpathmedia.com</a><a href="mailto:blake@kartpathmedia.com">blake@kartpathmedia.com</a><a href="mailto:editorial@kartpathmedia.com">editorial@kartpathmedia.com</a></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 KartPath Media LLC · Life Around Senoia</span><span>Peachtree City, GA</span></div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

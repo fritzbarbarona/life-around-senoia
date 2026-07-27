@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lifestyle — Life Around Senoia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500;1,9..144,600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Archivo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.page-hero{padding:52px 0 36px}
+.page-hero h1{font-size:clamp(2.2rem,4.5vw,3.2rem);margin:14px 0 12px}
+.subnav{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.subnav a{font-family:var(--ui);font-weight:700;font-size:.82rem;padding:9px 18px;border-radius:999px;border:1px solid var(--line);background:var(--card)}
+.subnav a:hover{border-color:var(--brick);color:var(--brick)}
+
+.sauce-card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:40px;margin-bottom:24px}
+.sauce-card h3{font-size:1.6rem;margin-bottom:14px}
+.sauce-card p{color:var(--ink-soft);line-height:1.7;margin-bottom:12px}
+
+.hist-row{display:grid;grid-template-columns:.9fr 1.1fr;gap:36px;align-items:center}
+.hist-img{aspect-ratio:1/1;border-radius:16px;overflow:hidden}
+.hist-timeline{list-style:none;margin-top:20px}
+.hist-timeline li{display:flex;gap:14px;padding:10px 0;border-bottom:1px solid var(--line);font-size:.92rem}
+.hist-timeline b{font-family:var(--display);color:var(--brick);min-width:52px}
+
+.recipe-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.recipe-card .card-img{aspect-ratio:1/1}
+
+@media(max-width:900px){.hist-row{grid-template-columns:1fr}.recipe-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.recipe-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav-bar">
+    <a href="index.html" class="brand"><div><div class="brand-mark">Life Around <em>Senoia</em></div><div class="brand-sub">A KartPath Media Publication</div></div></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li class="has-dropdown"><a href="people.html">People ▾</a>
+        <div class="dropdown"><a href="people.html#featured-families">Featured Families</a><a href="people.html#young-achievers">Young Achievers</a><a href="people.html#pet-of-the-month">Pet of the Month</a></div>
+      </li>
+      <li><a href="nonprofit.html">Nonprofit</a></li>
+      <li class="active"><a href="lifestyle.html">Lifestyle</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="directory.html">Directory</a></li>
+      <li><a href="editions.html">Digital Editions</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <a href="advertise.html" class="nav-cta">Advertise With Us</a>
+    <button class="nav-toggle">☰</button>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <span class="eyebrow">Lifestyle</span>
+    <h1>The flavor of life around town</h1>
+    <p style="color:var(--ink-soft);max-width:620px">History, home cooking, and the reflections that give Senoia its character — the Secret Sauce column, What's Cooking, and stories from the Historical Society.</p>
+    <div class="subnav">
+      <a href="#secret-sauce">Secret Sauce</a>
+      <a href="#historical-society">Historical Society</a>
+      <a href="#whats-cooking">What's Cooking</a>
+    </div>
+  </div>
+</section>
+
+<!-- SECRET SAUCE -->
+<section id="secret-sauce" style="padding-top:10px">
+  <div class="wrap-narrow">
+    <div class="section-head" style="margin-bottom:20px"><div><span class="eyebrow">Column</span><h2>Secret Sauce</h2></div></div>
+
+    <div class="sauce-card">
+      <span class="issue-chip" style="font-family:var(--ui);font-size:.68rem;color:var(--ink-faint);text-transform:uppercase;letter-spacing:.08em">Issue 6</span>
+      <h3>Freedom Worth Celebrating</h3>
+      <p>Every July, we're reminded how blessed we are to call America home — and this year, as the country marked its 250th birthday, that gratitude felt even more significant. Here in Senoia, neighbors gathered, fireworks lit up the night sky, and flags waved proudly from front porches all across downtown.</p>
+      <p>Among all the freedoms worth celebrating, one is especially easy to overlook: the freedom to worship. Across our community each week, church doors open without fear. It's a reminder that freedom is never something to assume — it's a gift, purchased through sacrifice and worthy of both our gratitude and our remembrance.</p>
+    </div>
+
+    <div class="sauce-card">
+      <span class="issue-chip" style="font-family:var(--ui);font-size:.68rem;color:var(--ink-faint);text-transform:uppercase;letter-spacing:.08em">Issue 1</span>
+      <h3>Community: Senoia's True Secret Sauce</h3>
+      <p>Ask anyone what they love about Senoia and you'll almost always hear the same answer: the community. Yes, there's the small-town charm, the Hollywood history, the local shops, parks, and trails — but Senoia's heart runs deeper than those surface-level treasures.</p>
+      <p>What makes Senoia so special is the sense of belonging it cultivates. Neighbors care, strangers are welcomed, and differences are respected. It doesn't require uniformity, only unity.</p>
+    </div>
+  </div>
+</section>
+
+<!-- HISTORICAL SOCIETY -->
+<section class="on-paper2" id="historical-society">
+  <div class="wrap">
+    <div class="section-head"><div><span class="eyebrow">Local History</span><h2>Keeping Senoia's Story Alive</h2></div></div>
+    <div class="hist-row">
+      <div class="hist-img"><div class="photo-placeholder">Senoia Area History Museum<br>6 Couch Street</div></div>
+      <div>
+        <p style="color:var(--ink-soft);margin-bottom:14px">The Senoia Area Historical Society exists to secure, preserve, and promote the social and cultural history of our community — but at its heart, it isn't just about dates and documents. It's about the people who built the town, the places that shaped it, and the volunteers who make sure those stories aren't lost to time.</p>
+        <ul class="hist-timeline">
+          <li><b>1976</b> A group of neighbors celebrates the Bicentennial — $55.89 left over becomes the Society's seed money.</li>
+          <li><b>1980</b> The Senoia Area Historical Society officially incorporates.</li>
+          <li><b>1989</b> Senoia's Historic District is added to the National Register of Historic Places.</li>
+          <li><b>1990</b> The Society purchases the historic 1870s Carmichael home at 6 Couch Street.</li>
+          <li><b>2010</b> The Senoia Area History Museum opens its doors on July 18.</li>
+        </ul>
+        <p style="color:var(--ink-soft);margin-top:14px;font-size:.92rem">Open weekends · <a href="https://www.senoiahistory.com" style="text-decoration:underline;color:var(--brick)" target="_blank" rel="noopener">senoiahistory.com</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT'S COOKING -->
+<section id="whats-cooking">
+  <div class="wrap">
+    <div class="section-head">
+      <div><span class="eyebrow">Column</span><h2>What's Cooking</h2></div>
+      <p style="color:var(--ink-soft);max-width:280px;font-size:.92rem">Recipes from the magazine, repurposed for the site with full ingredient lists and steps.</p>
+    </div>
+    <div class="recipe-grid">
+      <div class="card recipe-card">
+        <div class="card-img"><div class="photo-placeholder">Senoia Sunrise<br>Issue 6</div></div>
+        <div class="card-body"><span class="tag tag-lifestyle">Recipe</span><h3 class="card-title">Senoia Sunrise</h3><p class="card-dek">Doc Brown's Day Swigger whiskey meets bright orange and lime for a crisp, easy-sipping cocktail built for slow Senoia afternoons. Full recipe below.</p></div>
+      </div>
+      <div class="card recipe-card">
+        <div class="card-img"><div class="photo-placeholder">What's Cooking<br>Issue 4</div></div>
+        <div class="card-body"><span class="tag tag-lifestyle">Recipe</span><h3 class="card-title">What's Cooking — Issue 4</h3><p class="card-dek">A seasonal favorite from our What's Cooking column. Full recipe card coming as we digitize the issue.</p></div>
+      </div>
+      <div class="card recipe-card">
+        <div class="card-img"><div class="photo-placeholder">What's Cooking<br>Issue 1</div></div>
+        <div class="card-body"><span class="tag tag-lifestyle">Recipe</span><h3 class="card-title">What's Cooking — Issue 1</h3><p class="card-dek">A seasonal favorite from our What's Cooking column. Full recipe card coming as we digitize the issue.</p></div>
+      </div>
+    </div>
+
+    <div class="sauce-card" style="margin-top:26px">
+      <span class="issue-chip" style="font-family:var(--ui);font-size:.68rem;color:var(--ink-faint);text-transform:uppercase;letter-spacing:.08em">Issue 6 · Full Recipe</span>
+      <h3>Senoia Sunrise</h3>
+      <p>Some cocktails are made for celebrations. Others are made for slow summer afternoons — the Senoia Sunrise is both. It borrows the bright citrus of a classic mimosa and pairs it with the smooth warmth of bourbon for something crisp, refreshing, and surprisingly easy to sip. Cheers!</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px;margin-top:20px">
+        <div>
+          <h4 style="font-size:1.05rem;color:var(--brick);margin-bottom:10px">Ingredients</h4>
+          <ul style="list-style:disc;padding-left:20px;color:var(--ink-soft);font-size:.95rem;line-height:1.9">
+            <li>2 oz Doc Brown's Day Swigger Southern Ember Whiskey</li>
+            <li>3 oz fresh orange juice</li>
+            <li>Splash of fresh lime juice</li>
+            <li>Sparkling water, to top</li>
+            <li>Fresh peach slice, for garnish</li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="font-size:1.05rem;color:var(--brick);margin-bottom:10px">Instructions</h4>
+          <ol style="list-style:decimal;padding-left:20px;color:var(--ink-soft);font-size:.95rem;line-height:1.9">
+            <li>Fill a cocktail shaker with ice.</li>
+            <li>Add the whiskey, orange juice, and lime juice. Shake well until chilled.</li>
+            <li>Fill a rocks glass with fresh ice and strain the cocktail into the glass.</li>
+            <li>Top with sparkling water.</li>
+            <li>Garnish with a fresh peach slice.</li>
+          </ol>
+        </div>
+      </div>
+      <p style="font-size:.82rem;color:var(--ink-faint);margin-top:18px;margin-bottom:0">Please enjoy responsibly. Must be 21+ to consume alcohol.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div><div class="footer-brand">Life Around <em style="color:var(--honey-soft);font-style:italic">Senoia</em></div>
+        <p class="footer-tag">A bi-monthly, hyper-local magazine celebrating the people, businesses, and stories that make Senoia special. Published by KartPath Media.</p></div>
+      <div><h4>Explore</h4><a href="people.html">People</a><a href="nonprofit.html">Nonprofit</a><a href="lifestyle.html">Lifestyle</a><a href="events.html">Events</a><a href="directory.html">Directory</a></div>
+      <div><h4>Publication</h4><a href="editions.html">Digital Editions</a><a href="about.html">About Us</a><a href="advertise.html">Advertise</a><a href="about.html#nominate">Nominate a Story</a></div>
+      <div><h4>Contact</h4><a href="mailto:kevin@kartpathmedia.com">kevin@kartpathmedia.com</a><a href="mailto:blake@kartpathmedia.com">blake@kartpathmedia.com</a><a href="mailto:editorial@kartpathmedia.com">editorial@kartpathmedia.com</a></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 KartPath Media LLC · Life Around Senoia</span><span>Peachtree City, GA</span></div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
