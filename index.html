@@ -28,13 +28,12 @@
 .hero-badge .porch-light{color:var(--honey-soft)}
 .hero-badge p{font-family:var(--display);font-size:1.05rem;margin-top:4px}
 
-/* Latest issue strip */
-.issue-strip{background:var(--pine-deep);padding:20px 0}
-.issue-strip .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
-.issue-strip .left{display:flex;align-items:center;gap:16px;color:var(--paper)}
-.issue-cover-mini{width:46px;height:60px;border-radius:4px;background:linear-gradient(160deg,var(--honey),var(--brick));flex-shrink:0}
-.issue-strip .left p{font-family:var(--ui);font-size:.9rem;color:rgba(251,247,239,.8)}
-.issue-strip .left strong{font-family:var(--display);font-size:1.15rem;font-weight:600;display:block;color:var(--paper)}
+/* Homepage ad slot */
+.ad-slot{padding:26px 0}
+.ad-label{display:block;text-align:center;font-family:var(--ui);font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:12px}
+.ad-placeholder{border:2px dashed var(--line);border-radius:16px;background:var(--paper-2);min-height:150px;display:flex;align-items:center;justify-content:center;text-align:center;padding:34px 24px}
+.ad-placeholder strong{font-family:var(--display);font-size:1.4rem;font-weight:600;color:var(--pine-deep);display:block;margin-bottom:8px}
+.ad-placeholder p{font-family:var(--read);color:var(--ink-soft);font-size:.94rem;line-height:1.5;margin:0 auto 16px;max-width:440px}
 
 /* Category rail */
 .cat-rail{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
@@ -136,7 +135,7 @@
       </div>
       <div class="hero-stats">
         <div class="hero-stat"><b>6</b><span>Issues Published</span></div>
-        <div class="hero-stat"><b>40+</b><span>Businesses Featured</span></div>
+        <div class="hero-stat"><b>XX+</b><span>Businesses Featured</span></div><!-- TODO: replace XX+ with the confirmed number of businesses featured -->
         <div class="hero-stat"><b>Bi-Monthly</b><span>Direct-Mailed to Senoia</span></div>
       </div>
     </div>
@@ -150,16 +149,24 @@
   </div>
 </section>
 
-<!-- ============ LATEST ISSUE STRIP ============ -->
-<div class="issue-strip">
+<!-- ============ AD SLOT (was: Latest Digital Edition strip) ============
+     TO GO LIVE WITH A REAL AD: replace the .ad-placeholder <div> below with your ad, e.g.
+       <a href="https://advertiser-website.com" target="_blank" rel="noopener">
+         <img src="images/homepage-ad.jpg" alt="Advertiser name" style="width:100%;display:block;border-radius:16px">
+       </a>
+-->
+<section class="ad-slot">
   <div class="wrap">
-    <div class="left">
-      <div class="issue-cover-mini"></div>
-      <p>Latest Digital Edition<strong>Life Around Senoia — Issue 6</strong></p>
+    <span class="ad-label">Advertisement</span>
+    <div class="ad-placeholder">
+      <div>
+        <strong>Your Ad Here</strong>
+        <p>Premium homepage placement — reach Senoia households in print and online.</p>
+        <a href="advertise.html" class="btn btn-primary">Advertise With Us</a>
+      </div>
     </div>
-    <a href="editions.html" class="btn btn-outline-light">Read the Full Digital Edition</a>
   </div>
-</div>
+</section>
 
 <!-- ============ CATEGORY RAIL ============ -->
 <section>
