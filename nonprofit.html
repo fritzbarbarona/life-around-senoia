@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nonprofit Spotlights — Life Around Senoia</title>
+<title>Community — Life Around Senoia</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500;1,9..144,600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Archivo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -11,6 +11,9 @@
 <style>
 .page-hero{padding:52px 0 36px}
 .page-hero h1{font-size:clamp(2.2rem,4.5vw,3.2rem);margin:14px 0 12px}
+.subnav{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.subnav a{font-family:var(--ui);font-weight:700;font-size:.82rem;padding:9px 18px;border-radius:999px;border:1px solid var(--line);background:var(--card)}
+.subnav a:hover{border-color:var(--brick);color:var(--brick)}
 .np-row{display:grid;grid-template-columns:.85fr 1.15fr;gap:36px;align-items:center;padding:40px 0;border-bottom:1px solid var(--line)}
 .np-row:last-child{border-bottom:none}
 .np-row.reverse{grid-template-columns:1.15fr .85fr}
@@ -19,7 +22,7 @@
 .np-copy .issue-chip{font-family:var(--ui);font-size:.68rem;color:var(--ink-faint);letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px;display:block}
 .np-copy h3{font-size:1.7rem;margin-bottom:12px}
 .np-copy p{color:var(--ink-soft);font-size:1rem;line-height:1.65;margin-bottom:10px}
-.np-cta{display:inline-flex;gap:10px;margin-top:10px}
+.np-cta{display:inline-flex;gap:10px;margin-top:10px;flex-wrap:wrap}
 .involved-strip{background:var(--pine-deep);border-radius:20px;padding:44px;text-align:center;color:var(--paper)}
 @media(max-width:900px){.np-row,.np-row.reverse{grid-template-columns:1fr}.np-row.reverse .np-img{order:0}}
 </style>
@@ -34,7 +37,9 @@
       <li class="has-dropdown"><a href="people.html">People ▾</a>
         <div class="dropdown"><a href="people.html#featured-families">Featured Families</a><a href="people.html#young-achievers">Young Achievers</a><a href="people.html#pet-of-the-month">Pet of the Month</a><a href="people.html#feature">Feature</a></div>
       </li>
-      <li class="active"><a href="nonprofit.html">Nonprofit</a></li>
+      <li class="has-dropdown active"><a href="nonprofit.html">Community ▾</a>
+        <div class="dropdown"><a href="nonprofit.html#nonprofit-spotlight">Non-Profit Spotlight</a><a href="nonprofit.html#historic-society">Historic Society</a><a href="nonprofit.html#community-stories">Community Stories</a></div>
+      </li>
       <li><a href="lifestyle.html">Lifestyle</a></li>
       <li><a href="events.html">Events</a></li>
       <li><a href="directory.html">Directory</a></li>
@@ -48,30 +53,26 @@
 
 <section class="page-hero">
   <div class="wrap">
-    <span class="eyebrow">Nonprofit Spotlight</span>
-    <h1>The organizations quietly holding our community together</h1>
-    <p style="color:var(--ink-soft);max-width:620px">Every issue, we uplift a local nonprofit making a real difference — and give you a way to help.</p>
+    <span class="eyebrow">Community</span>
+    <h1>The organizations, history, and stories that hold Senoia together</h1>
+    <p style="color:var(--ink-soft);max-width:640px">From the nonprofits doing quiet good to the history beneath Main Street and the stories of the town itself — this is the heart of Senoia.</p>
+    <div class="subnav">
+      <a href="#nonprofit-spotlight">Non-Profit Spotlight</a>
+      <a href="#historic-society">Historic Society</a>
+      <a href="#community-stories">Community Stories</a>
+    </div>
   </div>
 </section>
 
-<section style="padding-top:10px">
+<!-- NON-PROFIT SPOTLIGHT -->
+<section id="nonprofit-spotlight" style="padding-top:10px">
   <div class="wrap">
+    <div class="section-head"><div><span class="eyebrow">Section</span><h2>Non-Profit Spotlight</h2></div></div>
 
     <div class="np-row">
-      <div class="np-img"><div class="photo-placeholder">i58 Mission<br>Issue 1</div></div>
-      <div class="np-copy">
-        <span class="issue-chip">Issue 1 · Nonprofit Spotlight</span>
-        <h3>i58 Mission: Loving People With Dignity</h3>
-        <p>It started with an Angel Tree drive. Karhma Novak expected to buy gifts and drop them in a box — instead she was asked to deliver them in person, and found a family that needed far more than a few holiday presents.</p>
-        <p>What began with a few calls to friends turned Karhma's own home into a distribution center. Out of that beautiful chaos, i58 Mission was born — a grassroots movement fueled by faith, purpose, and a deep desire to meet people where they are, esteeming the marginalized and restoring dignity each week.</p>
-        <div class="np-cta"><a href="tel:7703010870" class="btn btn-outline">770-301-0870</a><a href="https://www.thei58mission.org" class="btn-ghost" target="_blank" rel="noopener">thei58mission.org</a></div>
-      </div>
-    </div>
-
-    <div class="np-row reverse">
       <div class="np-img"><div class="photo-placeholder">Senoia Optimist Club<br>Issue 6</div></div>
       <div class="np-copy">
-        <span class="issue-chip">Issue 6 · Nonprofit Spotlight</span>
+        <span class="issue-chip">Issue 6 · Non-Profit Spotlight</span>
         <h3>Four Decades of Showing Up: The Senoia Optimist Club</h3>
         <p>For more than four decades, the Senoia Optimist Club has quietly met the needs that aren't always obvious — the student who needs a scholarship, the child who could use a mentor, the family looking for connection. Chartered in 1985, the club has lived out the Optimist International motto, "Friend of Youth," ever since.</p>
         <p>From scholarships and the Hugh O'Brian Youth Leadership Seminar to the annual Fish Derby at Lake Marimac and Taste of Senoia, everything the club does points one direction: bringing out the best in kids. Just over 30 members strong today, they meet the first Thursday of each month at I-58 Mission — and there's always room for more hands and more hearts.</p>
@@ -79,13 +80,154 @@
       </div>
     </div>
 
+    <div class="np-row reverse">
+      <div class="np-img"><div class="photo-placeholder">A Better Way Ministries<br>Issue 5</div></div>
+      <div class="np-copy">
+        <span class="issue-chip">Issue 5 · Non-Profit Spotlight</span>
+        <h3>The Walking Light: A Better Way Ministries</h3>
+        <p>A Better Way Ministries believes every life can be redeemed. What began in 2005 — with founder John Barrow's vision taking shape during an 18-month stretch in solitary confinement — has grown into a ministry that has helped thousands of men across Georgia break free from addiction and life-controlling struggles through faith, discipline, and brotherhood.</p>
+        <p>Their 18-month residential program is funded in part by mission-driven businesses that teach real work skills: A Better Way Bargains thrift stores, a moving service, and a woodworking shop whose handcrafted tables sit in Chick-fil-A restaurants across the country. As they like to say, sometimes the brightest light begins in the darkest places.</p>
+      </div>
+    </div>
+
     <div class="np-row">
       <div class="np-img"><div class="photo-placeholder">ELEVATE Coweta Students<br>Issue 4</div></div>
       <div class="np-copy">
-        <span class="issue-chip">Issue 4 · Nonprofit Spotlight</span>
+        <span class="issue-chip">Issue 4 · Non-Profit Spotlight</span>
         <h3>ELEVATE Coweta Students: Filling the Gaps, One Student at a Time</h3>
         <p>In 2020, while much of the world felt uncertain and disconnected, ELEVATE Coweta Students stepped into its independent mission — recognizing that the needs of local students required a local, not national, response.</p>
-        <p>By staying flexible, nimble, and boots-on-the-ground, ELEVATE responds to needs as they emerge in Coweta County schools — immediately, personally, and relationally.</p>
+        <p>By staying flexible, nimble, and boots-on-the-ground, ELEVATE meets students right where they are in schools across Coweta County — and in the 2025–26 school year alone will directly impact more than 2,000 students. Not a statistic, they'd say, but 2,000 stories in motion.</p>
+      </div>
+    </div>
+
+    <div class="np-row reverse">
+      <div class="np-img"><div class="photo-placeholder">Our Father's House<br>Issue 3</div></div>
+      <div class="np-copy">
+        <span class="issue-chip">Issue 3 · Non-Profit Spotlight</span>
+        <h3>Our Father's House: More Than a Program</h3>
+        <p>For more than two decades, Our Father's House has been quietly shaping lives in Senoia — not through flashy programs, but through relationships built on trust and consistency. What began roughly 23 years ago as a simple tutoring effort by Linda Stankovich has grown into a place where children and families are known, supported, and walked alongside through every season of life.</p>
+        <p>Today, led by Jean Bright and Vera Adair, Our Father's House serves children K–12 with tutoring, mentorship, and a safe place to land — and in October 2025, after 23 years in donated spaces, it finally received a building of its own. As one leader put it, "we walk with them — not over them."</p>
+        <div class="np-cta"><a href="https://www.ourfathershousesenoia.org" class="btn-ghost" target="_blank" rel="noopener">ourfathershousesenoia.org</a></div>
+      </div>
+    </div>
+
+    <div class="np-row">
+      <div class="np-img"><div class="photo-placeholder">Backpack Buddies of Georgia<br>Issue 2</div></div>
+      <div class="np-copy">
+        <span class="issue-chip">Issue 2 · Non-Profit Spotlight</span>
+        <h3>Feeding Hope: The Heart of Backpack Buddies</h3>
+        <p>For more than a decade, Backpack Buddies of Georgia has made sure local children have the food they need when school isn't in session. It began in 2011 when April Anderson — moved by the question, "If the doors of your church closed tomorrow, would your community even notice?" — started packing bags for 20 children around a church table.</p>
+        <p>Today, with Lori Burnett and Nicole McNett alongside her, Backpack Buddies provides weekend and break-time bags for nearly 2,000 students across Coweta County, packed each Wednesday by a volunteer network of homeschool families, retirees, and neighbors. Just $25 a month can feed one child all year.</p>
+        <div class="np-cta"><a href="https://www.backpackbuddiesga.org" class="btn-ghost" target="_blank" rel="noopener">backpackbuddiesga.org</a></div>
+      </div>
+    </div>
+
+    <div class="np-row reverse">
+      <div class="np-img"><div class="photo-placeholder">i58 Mission<br>Issue 1</div></div>
+      <div class="np-copy">
+        <span class="issue-chip">Issue 1 · Non-Profit Spotlight</span>
+        <h3>i58 Mission: Loving People With Dignity</h3>
+        <p>It started with an Angel Tree drive. Karhma Novak expected to buy gifts and drop them in a box — instead she was asked to deliver them in person, and found a family that needed far more than a few holiday presents.</p>
+        <p>What began with a few calls to friends turned Karhma's own home into a distribution center. Out of that beautiful chaos, i58 Mission was born — a grassroots movement drawn from Isaiah 58 that esteems the marginalized and restores dignity every Thursday, where no one is turned away.</p>
+        <div class="np-cta"><a href="tel:7703010870" class="btn btn-outline">770-301-0870</a><a href="https://www.thei58mission.org" class="btn-ghost" target="_blank" rel="noopener">thei58mission.org</a></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- HISTORIC SOCIETY -->
+<section id="historic-society" class="on-paper2">
+  <div class="wrap">
+    <div class="section-head"><div><span class="eyebrow">Section</span><h2>Historic Society</h2></div></div>
+
+    <div class="np-row">
+      <div class="np-img"><div class="photo-placeholder">Crook's Corner<br>Issue 6</div></div>
+      <div class="np-copy">
+        <span class="issue-chip">Issue 6 · Historic Society</span>
+        <h3>The Heartbeat of Senoia: Honoring Ellis Crook</h3>
+        <p>When we featured the Crook family in Issue 3, we learned what many here have long known: sitting down with Ellis Crook wasn't an interview — it was an experience, one memory leading to the next through decades of Senoia history. That love for the town inspired him to write <em>Senoia Boy</em>, part memoir and part history book.</p>
+        <p>Though Mr. Ellis passed away on June 22, his legacy lives on through his family, the lives he touched, and the pages of <em>Senoia Boy</em>. In his honor, our history section will now be known as Crook's Corner — because history isn't just about remembering where we've been; it's about carrying those stories forward.</p>
+      </div>
+    </div>
+
+    <div class="np-row reverse">
+      <div class="np-img"><div class="photo-placeholder">The Railroad Era<br>Issue 5</div></div>
+      <div class="np-copy">
+        <span class="issue-chip">Issue 5 · Historic Society</span>
+        <h3>The Tracks That Set Senoia in Motion</h3>
+        <p>Before the sidewalks, storefronts, and gatherings downtown, there were tracks. The chartering of the Savannah, Griffin &amp; North Alabama Railroad in 1854 marked the beginning of Senoia's momentum — the rail company even helped lay out the town's streets within a half-mile of the tracks.</p>
+        <p>By the early 1900s, Senoia was a hub with two active depots, moving cotton, peaches, and grain to markets beyond. Rail service faded by the 1950s, but freight trains still pass through today — a quiet reminder of the force that set the town in motion.</p>
+      </div>
+    </div>
+
+    <div class="np-row">
+      <div class="np-img"><div class="photo-placeholder">Spring Fashion: Then &amp; Now<br>Issue 4</div></div>
+      <div class="np-copy">
+        <span class="issue-chip">Issue 4 · Historic Society</span>
+        <h3>Spring Fashion: Then &amp; Now</h3>
+        <p>Step inside the Senoia Area Historical Society Museum and you'll find a white cotton dress worn by Lillian "Lillie" Sibley Hollberg in the first decade of the 1900s. Inspired by the "Gibson Girl" look of the era, its dramatic S-curve silhouette and delicate Leavers lace made it as much a statement as a garment.</p>
+        <p>Lillie had reason to keep up with fashion — her husband, C.F. Hollberg, built the Hollberg Hotel (now the Veranda Historic Inn) and served three terms as mayor. The dress is a snapshot of a woman, a family, and a town in motion. Thankfully, no corset required.</p>
+      </div>
+    </div>
+
+    <div class="np-row reverse">
+      <div class="np-img"><div class="photo-placeholder">Keeping Senoia's Story Alive<br>Issue 3</div></div>
+      <div class="np-copy">
+        <span class="issue-chip">Issue 3 · Historic Society</span>
+        <h3>Keeping Senoia's Story Alive</h3>
+        <p>The Senoia Area Historical Society traces its roots to 1976, when neighbors gathered to celebrate the nation's Bicentennial — and turned the $55.89 left in the budget into seed money for something lasting. Incorporated in 1980, the Society helped secure Senoia's place on the National Register of Historic Places in 1989.</p>
+        <p>In 1990 the Society purchased the historic 1870s Carmichael home at 6 Couch Street, and on July 18, 2010, the Senoia Area History Museum opened its doors — still staffed by volunteers who love sharing the stories of the town they call home.</p>
+        <div class="np-cta"><a href="https://www.senoiahistory.com" class="btn-ghost" target="_blank" rel="noopener">senoiahistory.com</a></div>
+      </div>
+    </div>
+
+    <div class="np-row">
+      <div class="np-img"><div class="photo-placeholder">A Fizz of History<br>Issue 2</div></div>
+      <div class="np-copy">
+        <span class="issue-chip">Issue 2 · Historic Society</span>
+        <h3>A Fizz of History: Senoia's Coca-Cola Connection</h3>
+        <p>Long before Hollywood came calling, Senoia played a small but fascinating role in Coca-Cola's early history. In the early 1900s, J.T. Williams and C.M. Blount ran a Coca-Cola bottling plant in the basement of the Baggarly Buggies &amp; Wagons building on Main Street — filling and capping bottles by hand just steps below the bustling storefronts.</p>
+        <p>Believed to have run from around 1910 into the 1920s or '30s, the little operation helped bring one of America's most iconic beverages to local families. Today the Senoia Area History Museum at 6 Couch Street preserves Coca-Cola memorabilia from that era — a fizzy little piece of history right beneath our feet.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- COMMUNITY STORIES -->
+<section id="community-stories">
+  <div class="wrap">
+    <div class="section-head"><div><span class="eyebrow">Section</span><h2>Community Stories</h2></div></div>
+
+    <div class="np-row">
+      <div class="np-img"><div class="photo-placeholder">Downtown Development Association<br>Issue 2</div></div>
+      <div class="np-copy">
+        <span class="issue-chip">Issue 2 · Community Story</span>
+        <h3>The Downtown Development Association: The Team Behind Senoia's Charm</h3>
+        <p>From PorchFest to the Car Show to the Tour of Homes, if it's happening downtown, the Downtown Development Authority (DDA) probably had a hand in it. Operating out of the Senoia Welcome Center, this seven-member volunteer board — affectionately dubbed the "Downtown Development Avengers" — works to keep Main Street thriving while honoring its heritage.</p>
+        <p>Behind the seasonal décor, façade grants, and free, family-friendly events is a team that does it all for love of community. As Chair April Anderson put it, walking through the children's area at Light Up Senoia moved her to tears: "this is exactly the kind of experience I would've loved to give my kids."</p>
+        <div class="np-cta"><a href="https://www.enjoysenoia.com" class="btn-ghost" target="_blank" rel="noopener">enjoysenoia.com</a></div>
+      </div>
+    </div>
+
+    <div class="np-row reverse">
+      <div class="np-img"><div class="photo-placeholder">The Story of Senoia<br>Issue 1</div></div>
+      <div class="np-copy">
+        <span class="issue-chip">Issue 1 · Community Story</span>
+        <h3>The Story of Senoia: From Railroads to Reel Life</h3>
+        <p>Right in the red clay heart of Coweta County, Senoia's story runs deeper than most realize — beginning not with Hollywood, but with farmland and a railway. The Atlanta &amp; West Point Railroad came through in the 1860s, and by 1866 the town was officially incorporated, growing quickly around the tracks.</p>
+        <p>Decades later, the cameras arrived — and with The Walking Dead came fans from all over the world. But instead of losing its roots to the spotlight, Senoia doubled down on them: the porch lights still come on at dusk, and the storefronts blend old and new. That's the real story of Senoia — built on history, resilience, and community.</p>
+      </div>
+    </div>
+
+    <div class="np-row">
+      <div class="np-img"><div class="photo-placeholder">The Secret Sauce of Senoia<br>Issue 1</div></div>
+      <div class="np-copy">
+        <span class="issue-chip">Issue 1 · Community Story</span>
+        <h3>The Secret Sauce of Senoia: A Community Rooted in Relationships</h3>
+        <p>Ask anyone what they love about Senoia and you'll almost always hear the same answer: the community. Beneath the small-town charm and Hollywood history, Senoia's real magic is a slower pace marked by genuine hospitality — a place where community isn't just a concept, but a daily practice.</p>
+        <p>ONE Church, just down the road from Main Street, is one example of how that connection takes shape — a place rooted in grace where everyone is welcome and nobody has to pretend to have it all together. Because at its core, Senoia grows from relationships. We're better together — and that's the true secret sauce.</p>
       </div>
     </div>
 
@@ -95,9 +237,9 @@
 <section class="on-paper2">
   <div class="wrap">
     <div class="involved-strip">
-      <span class="porch-light" style="justify-content:center;color:var(--honey-soft)"><span class="bulb"></span>Know a Nonprofit We Should Feature?</span>
-      <h2 style="color:var(--paper);margin:14px 0 18px;font-size:1.9rem">Help us find the next organization worth spotlighting</h2>
-      <a href="about.html#nominate" class="btn" style="background:var(--honey);color:var(--pine-deep)">Nominate a Nonprofit</a>
+      <span class="porch-light" style="justify-content:center;color:var(--honey-soft)"><span class="bulb"></span>Know a Story We Should Tell?</span>
+      <h2 style="color:var(--paper);margin:14px 0 18px;font-size:1.9rem">Nominate a nonprofit, a piece of local history, or a community story</h2>
+      <a href="about.html#nominate" class="btn" style="background:var(--honey);color:var(--pine-deep)">Nominate a Story</a>
     </div>
   </div>
 </section>
@@ -107,7 +249,7 @@
     <div class="footer-grid">
       <div><div class="footer-brand">Life Around <em style="color:var(--honey-soft);font-style:italic">Senoia</em></div>
         <p class="footer-tag">A bi-monthly, hyper-local magazine celebrating the people, businesses, and stories that make Senoia special. Published by KartPath Media.</p></div>
-      <div><h4>Explore</h4><a href="people.html">People</a><a href="nonprofit.html">Nonprofit</a><a href="lifestyle.html">Lifestyle</a><a href="events.html">Events</a><a href="directory.html">Directory</a></div>
+      <div><h4>Explore</h4><a href="people.html">People</a><a href="nonprofit.html">Community</a><a href="lifestyle.html">Lifestyle</a><a href="events.html">Events</a><a href="directory.html">Directory</a></div>
       <div><h4>Publication</h4><a href="editions.html">Digital Editions</a><a href="about.html">About Us</a><a href="advertise.html">Advertise</a><a href="about.html#nominate">Nominate a Story</a></div>
       <div><h4>Contact</h4><a href="mailto:kevin@kartpathmedia.com">kevin@kartpathmedia.com</a><a href="mailto:blake@kartpathmedia.com">blake@kartpathmedia.com</a><a href="mailto:editorial@kartpathmedia.com">editorial@kartpathmedia.com</a></div>
     </div>
